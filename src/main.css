@@ -6,4 +6,6 @@ body,
   height: 100%;
   width: 100%;
   box-sizing: border-box; /* Ensures that padding and borders are included within the width/height */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
