@@ -1,15 +1,16 @@
-import React, { CSSProperties } from "react";
-import { FaHouse } from "react-icons/fa6";
+import React from "react";
+import { FaHouse, FaCircleUser } from "react-icons/fa6";
 import TextInput from "../../components/TextInput";
+import "./styles.css";
 
 const Home: React.FC = () => {
   return (
-    <div style={styles.rootContainer}>
-      <div style={styles.headContainer}>
-        <div>
-          <FaHouse size={24} color="#83a1cc" />
+    <div className="rootContainer">
+      <div className="headContainer">
+        <div className="homeContainer">
+          <FaHouse className="homeIcon" size={24} />
         </div>
-        <div>
+        <div className="searchContainer">
           <TextInput
             placeholder="Search"
             type="text"
@@ -17,53 +18,13 @@ const Home: React.FC = () => {
             onChange={() => {}}
           />
         </div>
-        <div>Profile</div>
+        <div className="profileContainer">
+          <FaCircleUser size={24} className="profileIcon" />
+        </div>
       </div>
-      <div style={styles.filterContainer}>Block 2</div>
-      <div style={styles.contentContainer}>Block 3</div>
+      <div className="contentContainer">Block 3</div>
     </div>
   );
 };
 
 export default Home;
-
-interface Style {
-  rootContainer: CSSProperties;
-  headContainer: CSSProperties;
-  filterContainer: CSSProperties;
-  contentContainer: CSSProperties;
-}
-
-const styles: Style = {
-  rootContainer: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-  },
-  headContainer: {
-    display: "flex",
-    flex: 1,
-    backgroundColor: "#e9f2ff",
-    width: "100%",
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-  filterContainer: {
-    display: "flex",
-    flex: 1,
-    backgroundColor: "#0052cc",
-    width: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  contentContainer: {
-    display: "flex",
-    flex: 16,
-    backgroundColor: "#f5faff",
-    width: "100%",
-    justifyContent: "center",
-  },
-};

@@ -1,0 +1,58 @@
+.rootContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.headContainer {
+  display: flex;
+  flex: 1;
+  background-color: #e9f2ff;
+  width: 100%;
+  /* justify-content: space-around; */
+  align-items: center;
+  flex-direction: row;
+}
+
+.contentContainer {
+  display: flex;
+  flex: 16;
+  background-color: #e9f2ff;
+  width: 100%;
+  justify-content: center;
+}
+
+.homeContainer {
+  flex: 1;
+  padding: 0 2vh 0 2vh;
+}
+
+.homeIcon {
+  color: #83a1cc;
+}
+
+.homeIcon:hover {
+  color: #83a1fa;
+}
+
+.searchContainer {
+  flex: 16;
+  padding: 0 26vh 0 36vh;
+}
+
+.profileContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0 2vh 0 2vh;
+}
+
+.profileIcon {
+  color: #83a1cc;
+}
+
+.profileIcon:hover {
+  color: #83a1fa;
+}

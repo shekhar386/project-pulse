@@ -1,5 +1,5 @@
 import React from "react";
-import { styles } from "./styles";
+import "./styles.css";
 
 interface TextInputProps {
   label?: string;
@@ -16,9 +16,8 @@ const TextInput: React.FC<TextInputProps> = ({
   type,
 }) => {
   return (
-    <div>
+    <div className="field">
       <input
-        style={styles.inputFieldStyle}
         type={type}
         placeholder={placeholder}
         value={value}

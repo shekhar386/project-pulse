@@ -32,7 +32,7 @@ export const styles: Styles = {
   },
   mainContainerStyle: {
     backgroundColor: "white",
-    boxShadow: "rgba(0, 0, 0, 0.2) 0px 0px 10px",
+    boxShadow: "#282828 0px 0px 10px",
     display: "flex",
     flexDirection: "column",
     padding: "36px",
