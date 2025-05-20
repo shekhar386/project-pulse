@@ -23,7 +23,7 @@
 .filterContainer {
   display: flex;
   flex: 1;
-  background-color: #e9f2ff;
+  background-color: #83a1fa;
   width: 100%;
   /* justify-content: space-around; */
   align-items: center;
@@ -48,7 +48,15 @@
   flex: 16;
   background-color: #e9f2ff;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.listCategory {
+  display: flex;
+  flex-direction: row;
+  gap: 4vh;
+  padding: 4vh;
+  overflow-x: auto;
 }
 
 .homeContainer {

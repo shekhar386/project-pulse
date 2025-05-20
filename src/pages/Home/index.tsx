@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import { FaHouse, FaCircleUser } from "react-icons/fa6";
 import TextInput from "../../components/TextInput";
 import "./styles.css";
+import ListBox from "../../components/ListBox";
+
+const LIST = [1, 2];
 
 const Home: React.FC = () => {
   const [searchInputValue, setSearchInputValue] = useState<string>("");
+
+  const listItem = () =>
+    LIST.map(() => (
+      <div>
+        <ListBox cardArr={[]} />
+      </div>
+    ));
 
   return (
     <div className="rootContainer">
@@ -33,7 +43,9 @@ const Home: React.FC = () => {
         <div className="projectName">Project Name</div>
         <div className="filterUtils">Filters</div>
       </div>
-      <div className="contentContainer">Block 3</div>
+      <div className="contentContainer">
+        <div className="listCategory">{listItem()}</div>
+      </div>
     </div>
   );
 };
