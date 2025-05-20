@@ -27,6 +27,7 @@
 .listUtils {
   padding: 0.5vh;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .listUtils:hover {
