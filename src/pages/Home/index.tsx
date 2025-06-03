@@ -4,15 +4,17 @@ import TextInput from "../../components/TextInput";
 import "./styles.css";
 import ListBox from "../../components/ListBox";
 import EditableText from "../../components/EditableText";
+import AddListBox from "../../components/AddListBox";
 
 const LIST = [1, 2];
 
 const Home: React.FC = () => {
   const [searchInputValue, setSearchInputValue] = useState<string>("");
   const [projectName, setProjectName] = useState<string>("Project Name");
+  const [listBoxList, setListBoxList] = useState<unknown[]>(LIST);
 
   const listItem = () =>
-    LIST.map(() => (
+    listBoxList.map(() => (
       <div>
         <ListBox cardArr={[]} />
       </div>
@@ -53,7 +55,14 @@ const Home: React.FC = () => {
         <div className="filterUtils">Filters</div>
       </div>
       <div className="contentContainer">
-        <div className="listCategory">{listItem()}</div>
+        <div className="listCategory">
+          {listItem()}
+          <AddListBox
+            addFunc={() => {
+              setListBoxList((prev) => [...prev, 1]);
+            }}
+          />
+        </div>
       </div>
     </div>
   );

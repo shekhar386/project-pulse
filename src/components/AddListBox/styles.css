@@ -1,0 +1,19 @@
+.addListBoxBaseContainer {
+  flex: 1;
+  display: flex;
+  background-color: rgb(131, 161, 250, 0.7);
+  /* backdrop-filter: blur(10px); */
+  padding: 16px;
+  border-radius: 4px;
+  color: #ffffffcc;
+  font-weight: 700;
+  font-size: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.addListBoxBaseContainer:hover {
+  background-color: #83a1fa;
+}
