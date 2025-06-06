@@ -14,13 +14,18 @@ const Home: React.FC = () => {
   const [listBoxList, setListBoxList] = useState<unknown[]>(LIST);
 
   const listItem = () =>
-    listBoxList.map((_, index) => (
-      <div>
+    listBoxList.map((item) => (
+      //@ts-expect-error TypeError expected; To be fixed after list data structure is decided.
+      <div key={item}>
         <ListBox
           cardArr={[]}
           deleteBox={() => {
             setListBoxList((prev) =>
-              prev.filter((_, index0) => index0 !== index)
+              prev.filter((item0) => {
+                console.log("item ===", item);
+                console.log("item0 ===", item0);
+                return item0 !== item;
+              })
             );
           }}
         />
