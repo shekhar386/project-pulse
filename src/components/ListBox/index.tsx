@@ -1,13 +1,14 @@
 import React, { CSSProperties, useState } from "react";
 import "./styles.css";
-import { FaEllipsis } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 import EditableText from "../EditableText";
 
 interface ListBoxProps {
   cardArr: unknown[];
+  deleteBox: () => void;
 }
 
-const ListBox: React.FC<ListBoxProps> = ({ cardArr }) => {
+const ListBox: React.FC<ListBoxProps> = ({ cardArr, deleteBox }) => {
   const [cardArr0, setCardArr0] = useState<unknown[]>(cardArr);
   const [listName, setListName] = useState<string>("List Name");
 
@@ -24,8 +25,8 @@ const ListBox: React.FC<ListBoxProps> = ({ cardArr }) => {
             }}
           />
         </div>
-        <div className="listUtils">
-          <FaEllipsis size={12} />
+        <div onClick={() => deleteBox()} className="listUtils">
+          <IoMdClose size={16} />
         </div>
       </div>
       <div>Cards</div>

@@ -14,9 +14,16 @@ const Home: React.FC = () => {
   const [listBoxList, setListBoxList] = useState<unknown[]>(LIST);
 
   const listItem = () =>
-    listBoxList.map(() => (
+    listBoxList.map((_, index) => (
       <div>
-        <ListBox cardArr={[]} />
+        <ListBox
+          cardArr={[]}
+          deleteBox={() => {
+            setListBoxList((prev) =>
+              prev.filter((_, index0) => index0 !== index)
+            );
+          }}
+        />
       </div>
     ));
 
